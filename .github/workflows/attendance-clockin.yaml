@@ -1,0 +1,27 @@
+name: talenta-clockin
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  clock_in:
+    runs-on: ubuntu-latest
+    env:
+      URL_HOME: 'https://www.google.com'
+    steps:
+      - name: checkout my app
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with: 
+          node-version: "16.x"
+      
+      - name: Install dependencies
+        run: npm install
+
+      - name: run app
+        run: node clock-in.js
+
