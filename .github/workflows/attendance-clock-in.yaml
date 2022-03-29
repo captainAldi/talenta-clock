@@ -1,11 +1,11 @@
-name: talenta-clock-out
+name: talenta-clock-in
 
 on:
   schedule:
-    - cron: "00 18 * * 1-5"
+    - cron: "00 09 * * 1-5"
 
 jobs:
-  clock_out:
+  clock_in:
     runs-on: ubuntu-latest
     env:
       URL_HOME: ${{ secrets.URL_HOME }}
@@ -28,5 +28,5 @@ jobs:
         run: npm install
 
       - name: run app
-        run: node clock-out.js
+        run: node clock-in.js
 
