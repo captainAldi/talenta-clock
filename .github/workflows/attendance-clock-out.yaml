@@ -1,4 +1,4 @@
-name: talenta-clockin
+name: talenta-clock-out
 
 on:
   push:
@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       URL_HOME: ${{ secrets.URL_HOME }}
+      URL_LIVE_ATTENDANCE: ${{ secrets.URL_LIVE_ATTENDANCE }}
+      LATITUDE: ${{ secrets.LATITUDE }}
+      LONGITUDE: ${{ secrets.LONGITUDE }}
+      EMAIL: ${{ secrets.EMAIL }}
+      PASSWORD: ${{ secrets.PASSWORD }}
 
     steps:
       - name: checkout my app
@@ -24,5 +29,5 @@ jobs:
         run: npm install
 
       - name: run app
-        run: node clock-in.js
+        run: node clock-out.js
 
