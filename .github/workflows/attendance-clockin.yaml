@@ -9,7 +9,8 @@ jobs:
   clock_in:
     runs-on: ubuntu-latest
     env:
-      URL_HOME: 'https://www.google.com'
+      URL_HOME: ${{ secrets.URL_HOME }}
+
     steps:
       - name: checkout my app
         uses: actions/checkout@v2
