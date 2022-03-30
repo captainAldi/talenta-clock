@@ -3,6 +3,8 @@ name: talenta-clock-out
 on:
   schedule:
     - cron: "00 11 * * 1-5"
+    - cron: "00 12 * * 1-5"
+    - cron: "00 13 * * 1-5"
 
 jobs:
   clock_out:
