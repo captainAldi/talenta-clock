@@ -23,6 +23,7 @@ const puppeteer = require('puppeteer');
 
   // Go to Live Attendance
   await page.goto(process.env.URL_LIVE_ATTENDANCE);
+  await page.waitForTimeout(5000);
 
   // Click Clock Out
   await page.click('#tl-live-attendance-index > div > div.tl-content-max__600.my-3.my-md-5.mx-auto.px-3.px-md-0 > div.tl-card.hide-box-shadow-on-mobile.hide-border-on-mobile.text-center.p-0 > div.d-block.p-4.px-0-on-mobile > div > div:nth-child(2) > button')
