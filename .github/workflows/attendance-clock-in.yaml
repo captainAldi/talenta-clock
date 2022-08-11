@@ -2,9 +2,9 @@ name: talenta-clock-in
 
 on:
   schedule:
+    - cron: "00 01 * * 1-5"
+    - cron: "30 01 * * 1-5"
     - cron: "00 02 * * 1-5"
-    - cron: "30 02 * * 1-5"
-    - cron: "00 03 * * 1-5"
     
 jobs:
   clock_in:
